@@ -1,7 +1,7 @@
 class VideosController < ApplicationController
 
   def home
-    
+
   end
 
   def index
@@ -19,6 +19,16 @@ class VideosController < ApplicationController
   def create
     @video = Video.new(video_params)
     @video.save
+    redirect_to video_path(@video)
+  end
+
+  def edit
+    @video = Video.find(params[:id])
+  end
+
+  def update
+    @video = Video.find(params[:id])
+    @video.update(video_params)
     redirect_to video_path(@video)
   end
 

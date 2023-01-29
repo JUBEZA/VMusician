@@ -4,6 +4,8 @@
 <p><%= @video.category %></p>
 <p><%= @video.published_year %></p>
 
+
+
 <%= link_to "Delete",
   video_path(@video),
   data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
