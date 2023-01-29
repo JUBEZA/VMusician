@@ -1,0 +1,10 @@
+<h1>Information About: </h1>
+
+<h2><%= @video.title %></h2>
+<p><%= @video.category %></p>
+<p><%= @video.published_year %></p>
+
+<%= link_to "Delete",
+  video_path(@video),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+%>
