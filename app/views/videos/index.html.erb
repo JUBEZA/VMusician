@@ -1,7 +1,13 @@
-<h1>All the Videos</h1>
+
+
+<h1>Todos los Videos</h1>
+
 
 <ul>
   <% @videos.each do |video| %>
     <li><%= video.title %></li>
+    <li><%= video.category %></li>
+    <li><%= video.published_year %></li>
+
   <% end %>
 </ul>

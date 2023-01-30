@@ -1,3 +1,4 @@
+
 class VideosController < ApplicationController
 
   def home
@@ -35,7 +36,7 @@ class VideosController < ApplicationController
   def destroy
     @video = Video.find(params[:id])
     @video.destroy
-    redirect_to videos_path(@video), status: :see_others
+    redirect_to videos_path, status: :see_other
   end
 
   private
