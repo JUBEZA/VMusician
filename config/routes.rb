@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   resources :videos
   root to: "videos#home"
   # Defines the root path route ("/")
-  # root "articles#index".
+  # root "articles#index"
 end
